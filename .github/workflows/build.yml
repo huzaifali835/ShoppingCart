@@ -1,5 +1,11 @@
 version: "1.0"
 
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+    
 tasks:
   compile:
     description: "Compile the Java source files"
