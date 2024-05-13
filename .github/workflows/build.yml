@@ -1,0 +1,21 @@
+version: "1.0"
+
+tasks:
+  compile:
+    description: "Compile the Java source files"
+    steps:
+      - name: "Create build directory"
+        shell: mkdir build
+      - name: "Compile Java files"
+        shell: javac -d build src/*.java
+  run:
+    description: "Run the compiled program"
+    depends_on: "compile"
+    steps:
+      - name: "Run Java program"
+        shell: java -cp build Main
+  clean:
+    description: "Clean up build artifacts"
+    steps:
+      - name: "Delete build directory"
+        shell: rm -rf build
