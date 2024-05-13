@@ -8,8 +8,8 @@ public class Main {
             System.out.println("2. View Cart");
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
-            switch (choice) {
+            int userInput = scanner.nextInt();
+            switch (userInput) {
                 case 1:
                     System.out.print("Enter product name: ");
                     String name = scanner.next();
